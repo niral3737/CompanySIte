@@ -10,6 +10,6 @@ app.get('/health', function (req, res) {
   res.status(200);
 });
 
-app.listen(PORT, function () {
+app.listen(PORT,process.env.NODE_IP || 'localhost', function () {
   console.log(`Express app is up and running on ${PORT}`);
 });
